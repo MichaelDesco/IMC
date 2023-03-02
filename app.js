@@ -44,7 +44,7 @@ function showResult(BMI){
         if (BMI > data.range[0] && BMI <= data.range[1]) {
             rank = data;
             break;
-        } else if (typeof data.range === 'number' && data.range >= 40){
+        } else if (type of data.range === 'number' && data.range >= 40){
             rank = data;
             break
         }

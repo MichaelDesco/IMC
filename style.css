@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'fredoka';
+  src: url('Fredoka_One/FredokaOne-Regular.ttf');
+}
+
+
 *,
 ::before,
 ::after {
@@ -7,13 +13,13 @@
 }
 
 body {
+  font-family: 'fredoka',Arial, Helvetica, sans-serif;
   min-height: 100vh;
   font-family: Lato, Helvetica, sans-serif;
   background-image: url('photo-1672243773358-4d5a218d9d5f.avif');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: clamp(20px, 5vw, 50px) 10px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,31 +29,33 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   background-color: azure;
   height: 70vh;
-  width: 80vw;
-  padding-top: 2%;
+  width: 50vw;
   border-radius: 5px;
   box-shadow: 2px 2px 10px grey;
   
 }
 h1{
-  font-size: 3rem;
+  font-size: 4rem;
+  font-family: 'fredoka',Arial, Helvetica, sans-serif;
 }
 .inputs-container{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 .input-group{
   display: flex;
   flex-direction: column;
-  padding: 3% 5% 3%;
+  align-items: space-around;
   font-size: 1rem;
+  padding: 3% 1%;
 }
 input{
   border: none;
   box-shadow:1px 1px 3px 1px grey;
-  padding: 15px 50px;
+  padding: 15px 40px;
 }
 .button{
   display: flex;
@@ -68,38 +76,53 @@ button{
 }
 .info{
   text-align: center;
-  margin-top: 3%;
 }
 .bmi-value{
-  margin-bottom: 2rem;
   font-weight: bold;
   font-size: 2rem;
 }
 
-
+@media screen and (max-width:1205px) {
+  .container {
+    width: 60vw;
+  }
+}
+@media screen and (max-width:1085px) {
+  .container {
+    width: 70vw;
+  }
+}
 @media screen and (max-width:800px) {
+  .container{
+    width: 60vw;
+  }
   .inputs-container{
     flex-direction: column;
-    padding: 15px 30px;
+  }
+  h1{
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width:600px){
+  .container{
+    width: 70vw;
+  }
+  .input-group{
+    font-size: 0.8rem;
+  }
+  h1{
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width:450px) {
+  .container{
+    width: 90vw;
   }
   h1{
     font-size: 2rem;
   }
 }
 
-@media screen and (max-width:600px){
-  input{
-    padding: 5px 7px;
-  }
-  .input-group{
-    font-size: 0.8rem;
-  }
-  h1{
-    font-size: 1.5rem;
-  }
-  button{
-    padding: 8px 15px;
-    font-size: 0.8rem;
-  }
-}
 
